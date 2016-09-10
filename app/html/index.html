@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+{% for i in range(1,7) %}
+<h{{ i }}>h{{ i }}, Hello</h{{ i }}>
+{% endfor %}
+
+<button>Click Me</button>
+
+{% endblock %}
