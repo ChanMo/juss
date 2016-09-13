@@ -4,6 +4,7 @@
     font-size: 1.25em;
 }
 
+/**
 .footer {
     position: fixed;
     bottom: 0;
@@ -11,6 +12,7 @@
     right: 0;
     text-align: center;
 }
+**/
 
 .circle {
     display: block;
@@ -53,9 +55,4 @@ button, .button {
     display: none !important;
 }
 
-/** image **/
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
+

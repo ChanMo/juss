@@ -57,3 +57,14 @@
         letter-spacing: 4px;
     }
 }
+
+
+/********************** list menu **********************/
+ul.menu {
+    li {
+        display: inline;
+        a {
+            display: inline;
+        }
+    }
+}

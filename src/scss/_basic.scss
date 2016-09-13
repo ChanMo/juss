@@ -3,12 +3,41 @@ html, body {
     font-family: "Microsoft YaHei",tahoma,arial,sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    -webkit-margin-before: 0;
+}
+
+h1 {
+    font-size: 24px;
+}
+h2 {
+    font-size: 20px;
+}
+h3 {
+    font-size: 19px;
+}
+h4 {
+    font-size: 18px;
+}
+h5 {
+    font-size: 17px;
+}
+h6 {
+    font-size: 16px;
+}
+
+small {
+}
+
 div {
     box-sizing: border-box;
 }
 
 a {
     text-decoration: none;
+}
+
+p {
 }
 
 ul {
@@ -19,10 +48,14 @@ ul {
     list-style-type: none;
 }
 
+/** image **/
 img {
     max-width: 100%;
+    height: auto;
+    //display: block;
 }
 
+/** form **/
 input {
     width: 100%;
     height: 36px;
