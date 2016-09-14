@@ -36,7 +36,9 @@
         top: 0;
         line-height: 40px;
     }
-    input[type='search'] {
+    input[type='search'],
+    :hover,
+    :active {
         height: 100%;
         float: left;
         width: 80%;
@@ -46,8 +48,6 @@
         padding-left: 35px;
         background: none;
         position: relative;
-        &:focus {
-        }
     }
     .button {
         height: 100%;
