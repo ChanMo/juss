@@ -36,9 +36,7 @@
         top: 0;
         line-height: 40px;
     }
-    input[type='search'],
-    :hover,
-    :active {
+    input[type='search'] {
         height: 100%;
         float: left;
         width: 80%;
@@ -48,6 +46,11 @@
         padding-left: 35px;
         background: none;
         position: relative;
+        &:hover,
+        &:active {
+          border: 2px solid $primary-color;
+          box-shadow: none;
+        }
     }
     .button {
         height: 100%;
