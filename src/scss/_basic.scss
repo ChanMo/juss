@@ -56,7 +56,7 @@ img {
 }
 
 /** form **/
-input {
+input:not([type='checkbox']) {
     width: 100%;
     height: 36px;
 }
