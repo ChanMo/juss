@@ -1,0 +1,59 @@
+@import 'settings';
+.button {
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    user-select: none;
+    box-sizing: border-box;
+    font-size: 100%;
+    padding: 0.5em 1em;
+    color: #444;
+    color: rgba(0,0,0,0.80);
+    //border: 1px solid #999;
+    background-color: #E6E6E6;
+    text-decoration: none;
+    //border-radius: 2px;
+
+    margin-bottom: 0.5rem;
+
+    /** primary color **/
+    background: $primary-color;
+    color: white;
+    &:active {
+    }
+    &_size {
+        &_small {
+            font-size: 0.85rem;
+            padding: 0.3rem 0.8rem;
+        }
+        &_large {
+            font-size: 1.2rem;
+            padding: 0.6rem 1.2rem;
+        }
+        &_full {
+            display: block;
+            width: 100%;
+        }
+    }
+    &_color {
+        &_primary {
+            background: $primary-color;
+            color: white;
+        }
+        &_secondary {
+            background: $secondary-color;
+            color: black;
+        }
+    }
+    &_style{
+        &_hollow {
+            background: transparent;
+            color: $primary-color;
+            border: 1px solid $primary-color;
+        }
+    }
+}
+

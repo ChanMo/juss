@@ -62,7 +62,7 @@ gulp.task('useref', function(){
 gulp.task('nunjucksRender', function(){
     return gulp.src(['src/html/*.html'])
         .pipe(nunjucksRender({
-            path: ['src/template/']
+            path: ['src/html/']
         }))
         .pipe(gulp.dest('src'))
         .pipe(browserSync.reload({stream:true}));

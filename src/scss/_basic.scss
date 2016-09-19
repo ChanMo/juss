@@ -55,11 +55,11 @@ img {
     //display: block;
 }
 
-/** form **/
-input:not([type='checkbox']) {
-    width: 100%;
-    height: 36px;
+
+/****************** form *****************/
+
+span {
+    font-size: 0.85rem;
+    color: #333;
 }
 
-textarea {
-}

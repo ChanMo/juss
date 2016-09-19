@@ -1,0 +1,39 @@
+/** color **/
+.button {
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  user-select: none;
+  box-sizing: border-box;
+  font-size: 100%;
+  padding: 0.5em 1em;
+  color: #444;
+  color: rgba(0, 0, 0, 0.8);
+  background-color: #E6E6E6;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  /** primary color **/
+  background: #1f8dd6;
+  color: white; }
+  .button_size_small {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.8rem; }
+  .button_size_large {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.2rem; }
+  .button_size_full {
+    display: block;
+    width: 100%; }
+  .button_color_primary {
+    background: #1f8dd6;
+    color: white; }
+  .button_color_secondary {
+    background: #ccc;
+    color: black; }
+  .button_style_hollow {
+    background: transparent;
+    color: #1f8dd6;
+    border: 1px solid #1f8dd6; }

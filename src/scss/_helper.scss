@@ -29,27 +29,6 @@
 }
 
 /** compent **/
-
-button, .button {
-    display: inline-block;
-    white-space: nowrap;
-    vertical-align: middle;
-    text-align: center;
-    cursor: pointer;
-    border: none;
-    user-select: none;
-    box-sizing: border-box;
-    font-size: 100%;
-    padding: 0.5em 1em;
-    color: #444;
-    color: rgba(0,0,0,0.80);
-    border: 1px solid #999;
-    background-color: #E6E6E6;
-    text-decoration: none;
-    border-radius: 2px;
-    //background: $primary-color;
-}
-
 /** hidden class **/
 .hidden {
     display: none !important;

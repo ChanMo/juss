@@ -6,6 +6,35 @@
 <h{{ i }}>h{{ i }}, Hello</h{{ i }}>
 {% endfor %}
 
-<button>Click Me</button>
+<div style="width:200px">
+<button class="button button_size_small">Click Me</button>
+<button class="button">Click Me</button>
+<button class="button button_size_large">Click Me</button>
+<button class="button button_size_full">Click Me</button>
+<button class="button button_color_primary">Click Me</button>
+<button class="button button_color_secondary">Click Me</button>
+<button class="button button_style_hollow">Click Me</button>
+</div>
+
+<form style="width:200px">
+<label>text
+  <input type="text">
+  <span>help text</span>
+</label>
+<input type="text" readonly value="readonly">
+<input type="text" disabled value="not allowed">
+<input type="checkbox">
+<input type="radio">
+<select></select>
+<textarea></textarea>
+<input type="submit" value="save" class="button">
+</form>
+
+<div style="width: 400px;">
+<table>
+    <tr><th>Name</th><th>MOBILE</th></tr>
+    <tr><td></td><td>none</td></tr>
+</table>
+</div>
 
 {% endblock %}
