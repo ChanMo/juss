@@ -71,3 +71,20 @@ ul.menu {
         }
     }
 }
+
+
+
+.badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%,-50%);
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    padding: 2px;
+    min-width: 1rem;
+    background: #910000;
+    color: white;
+    font-size: 0.75rem;
+    box-sizing: border-box;
+}

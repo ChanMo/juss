@@ -1,3 +1,35 @@
+/**
+ * juss settings
+ */
+
 /** color **/
-$primary-color: #1f8dd6;
-$secondary-color: #ccc;
+@import 'color';
+
+$global-font-size: 100% !default;
+$global-width: rem-calc(1200) !default;
+
+$global-line-height: 1.5 !default;
+$global-font-weight: normal !default;
+$body-background: $white !default;
+$body-font-color: $black !default;
+$global-margin: 1rem !default;
+$global-padding: 1rem !default;
+$global-weight-normal: normal !default;
+$global-weight-bold: bold !default;
+$global-radius: 0 !default;
+$global-text-direction: ltr !default;
+$global-flexbox: false !default;
+
+
+/** default palette **/
+$juss-palette: (
+    primary: $cyan,
+    secondary: $dark-grey,
+    success: $aqua,
+    warning: $deep-orange,
+) !default;
+
+$primary-color: map-get($juss-palette, primary);
+$secondary-color: map-get($juss-palette, secondary);
+$success-color: map-get($juss-palette, success);
+$warning-color: map-get($juss-palette, warning);

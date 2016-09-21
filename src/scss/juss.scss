@@ -1,12 +1,14 @@
-@charset 'utf-8';
+/**
+ * juss
+ * @author chen
+ * @date 20160921
+ */
 
-@import '_color';
+@import 'color';
+@import 'util/util';
 
-@import '_settings';
-@import '_basic';
-@import '_helper';
-@import '_component';
+@import 'settings';
 
-@import 'button';
-@import 'form';
-@import 'table';
+@import 'basic';
+@import 'helper';
+@import 'grid';

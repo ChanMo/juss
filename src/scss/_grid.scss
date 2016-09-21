@@ -1,0 +1,51 @@
+/**
+ * grid
+ */
+
+$breakpoints: (
+    small: 0,
+    medium: 640px,
+    large: 1024px,
+    xlarge: 1200px,
+    xxlarge: 1440px,
+) !default;
+
+.wrap {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+@for $i from 1 through 12 {
+    @each $size in small, medium, large {
+        .wrap > .#{$size}-#{$i} {
+        display: block;
+        width: 100%/12*$i;
+        max-width: 100%;
+        box-sizing: border-box;
+        }
+    }
+
+    @media (max-width:map_get($breakpoints, small)) {
+        /** while small **/
+        [class*="small-#{$i}"] {
+            width: 100%/12*$i !important;
+        }
+    }
+    @media (min-width: map_get($breakpoints, small)) and (max-width: map_get($breakpoints, large)) {
+        [class*="medium-#{$i}"] {
+            width: 100%/12*$i !important;
+        }
+    }
+    @media (min-width: map_get($breakpoints, large)) {
+        [class*="large-#{$i}"] {
+            width: 100%/12*$i !important;
+
+        }
+
+    }
+
+}

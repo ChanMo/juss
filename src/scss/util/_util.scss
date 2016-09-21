@@ -1,0 +1,42 @@
+/**
+ *
+ */
+
+$global-font-size: 100% !default;
+
+@function rem-calc($values, $base:null) {
+    $count: length($values);
+    @return $values;
+}
+
+
+@mixin clearfix {
+    &::before,
+    &::after {
+        content: ' ';
+        display: table;
+    }
+
+    &::after {
+        clear:both;
+    }
+}
+
+@mixin vertical-center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin horizontal-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

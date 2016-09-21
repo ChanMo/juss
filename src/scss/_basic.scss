@@ -1,65 +1,88 @@
-html, body {
-    width: 100%;
-    font-family: "Microsoft YaHei",tahoma,arial,sans-serif;
-}
+/**
+ * basic
+ */
 
-h1, h2, h3, h4, h5, h6 {
-    -webkit-margin-before: 0;
-}
+@mixin juss-global-styles {
 
-h1 {
-    font-size: 24px;
-}
-h2 {
-    font-size: 20px;
-}
-h3 {
-    font-size: 19px;
-}
-h4 {
-    font-size: 18px;
-}
-h5 {
-    font-size: 17px;
-}
-h6 {
-    font-size: 16px;
-}
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
 
-small {
-}
+    body {
+        padding: 0;
+        margin: 0;
+        font-family: "Microsoft YaHei",tahoma,arial,sans-serif;
+        font-weight: $global-font-weight;
+        line-height: $global-line-height;
+        color: $body-font-color;
+        background: $body-background;
+    }
 
-div {
-    box-sizing: border-box;
-}
-
-a {
-    text-decoration: none;
-}
-
-p {
-}
-
-ul {
-    margin: 0;
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
-    -webkit-padding-start: 0;
-    list-style-type: none;
-}
-
-/** image **/
-img {
-    max-width: 100%;
-    height: auto;
-    //display: block;
-}
+    /** h1 to h6 **/
+    @each $header, $size in (h1:2rem, h2:1.5rem, h3:1.2rem, h4:1.1rem, h5:1rem, h6:0.9rem) {
+        #{$header} {
+        font-size: $size;
+        -webkit-margin-before: 0;
+        }
+    }
 
 
-/****************** form *****************/
+    small {
+        font-size: 80%;
+    }
 
-span {
-    font-size: 0.85rem;
-    color: #333;
+    div {
+        //box-sizing: border-box;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    p {
+    }
+
+    ul {
+        margin: 0;
+        -webkit-margin-before: 0;
+        -webkit-margin-after: 0;
+        -webkit-padding-start: 0;
+        list-style-type: none;
+    }
+
+    /** image **/
+    img {
+        max-width: 100%;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    textarea {
+        height: auto;
+        min-height: 50px;
+        border-radius: $global-radius;
+    }
+
+    select {
+        width: 100%;
+        border-radius: $global-radius;
+    }
+
+    button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: transparent;
+        padding: 0;
+        border: 0;
+        border-radius: $global-radius;
+        line-height: 1;
+    }
+
+    span {
+        font-size: 90%;
+        color: $body-font-color * 0.8;
+    }
 }
-

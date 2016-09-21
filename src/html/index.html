@@ -1,40 +1,65 @@
 {% extends "base.html" %}
-
 {% block main %}
-
-{% for i in range(1,7) %}
-<h{{ i }}>h{{ i }}, Hello</h{{ i }}>
-{% endfor %}
-
-<div style="width:200px">
-<button class="button button_size_small">Click Me</button>
-<button class="button">Click Me</button>
-<button class="button button_size_large">Click Me</button>
-<button class="button button_size_full">Click Me</button>
-<button class="button button_color_primary">Click Me</button>
-<button class="button button_color_secondary">Click Me</button>
-<button class="button button_style_hollow">Click Me</button>
+<div class="wrap main">
+  <div class="medium-3 main-menu">
+    <ul class="menu">
+      <li><a href="#base">Base</a></li>
+      <li class="active"><a href="#grid">Grid</a></li>
+      <li><a href="#button">Button</a></li>
+      <li><a href="#form">Form</a></li>
+      <li><a href="#table">Table</a></li>
+    </ul>
+  </div>
+  <div class="medium-9 main-container">
+    <div class="wrap">
+      <div class="small-12" id="base">
+        <h2>Base</h2>
+        {% for i in range(1,7) %}
+        <h{{ i }}>h{{ i }}, Hello</h{{ i }}>
+        {% endfor %}
+      </div>
+      <div class="small-12" id="grid">
+        <h2>Grid</h2>
+        <div class="wrap">
+          {% for i in range(0,12) %}
+          <div class="small-12 medium-6 large-3" style="border:1px solid #ccc;height:40px;margin-bottom:1rem;"></div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="small-12" id="button">
+        <h2>Button</h2>
+        <button class="button button_size_small">Click Me</button>
+        <button class="button">Click Me</button>
+        <button class="button button_size_large">Click Me</button>
+        <button class="button button_size_full">Click Me</button>
+        <button class="button button_color_primary">Click Me</button>
+        <button class="button button_color_secondary">Click Me</button>
+        <button class="button button_style_hollow">Click Me</button>
+      </div>
+      <div class="small-12" id="form">
+        <h2>Form</h2>
+        <form>
+          <label>text
+            <input type="text">
+            <span>help text</span>
+          </label>
+          <input type="text" readonly value="readonly">
+          <input type="text" disabled value="not allowed">
+          <input type="checkbox">
+          <input type="radio">
+          <select></select>
+          <textarea></textarea>
+          <input type="submit" value="save" class="button">
+        </form>
+      </div>
+      <div class="small-12" id="table">
+        <h2>Table</h2>
+        <table>
+          <tr><th>Name</th><th>MOBILE</th></tr>
+          <tr><td></td><td>none</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>
-
-<form style="width:200px">
-<label>text
-  <input type="text">
-  <span>help text</span>
-</label>
-<input type="text" readonly value="readonly">
-<input type="text" disabled value="not allowed">
-<input type="checkbox">
-<input type="radio">
-<select></select>
-<textarea></textarea>
-<input type="submit" value="save" class="button">
-</form>
-
-<div style="width: 400px;">
-<table>
-    <tr><th>Name</th><th>MOBILE</th></tr>
-    <tr><td></td><td>none</td></tr>
-</table>
-</div>
-
 {% endblock %}
