@@ -4,10 +4,12 @@
   <div class="medium-3 main-menu">
     <ul class="menu">
       <li><a href="#base">Base</a></li>
-      <li class="active"><a href="#grid">Grid</a></li>
-      <li><a href="#button">Button</a></li>
+      <li><a href="#color">Color</a></li>
       <li><a href="#form">Form</a></li>
       <li><a href="#table">Table</a></li>
+      <li><a href="#button">Button</a></li>
+      <li class="active"><a href="#grid">Grid</a></li>
+      <li><a href="#helper">Helper</a></li>
     </ul>
   </div>
   <div class="medium-9 main-container">
@@ -18,23 +20,15 @@
         <h{{ i }}>h{{ i }}, Hello</h{{ i }}>
         {% endfor %}
       </div>
-      <div class="small-12" id="grid">
-        <h2>Grid</h2>
-        <div class="wrap">
-          {% for i in range(0,12) %}
-          <div class="small-12 medium-6 large-3" style="border:1px solid #ccc;height:40px;margin-bottom:1rem;"></div>
-          {% endfor %}
+      <div class="small-12" id="color">
+        <h2>Color</h2>
+        {% for item in ['red','green','blue'] %}
+        <p class="text-{{ item }}">.text-{{ item }}</p>
+        {% endfor %}
+        {% for item in ['red','green','blue'] %}
+        <p class="bg-{{ item }}">.bg-{{ item }}</p>
+        {% endfor %}
         </div>
-      </div>
-      <div class="small-12" id="button">
-        <h2>Button</h2>
-        <button class="button button_size_small">Click Me</button>
-        <button class="button">Click Me</button>
-        <button class="button button_size_large">Click Me</button>
-        <button class="button button_size_full">Click Me</button>
-        <button class="button button_color_primary">Click Me</button>
-        <button class="button button_color_secondary">Click Me</button>
-        <button class="button button_style_hollow">Click Me</button>
       </div>
       <div class="small-12" id="form">
         <h2>Form</h2>
@@ -58,6 +52,45 @@
           <tr><th>Name</th><th>MOBILE</th></tr>
           <tr><td></td><td>none</td></tr>
         </table>
+        <table class="table_bordered">
+          <tr><th>Name</th><th>MOBILE</th></tr>
+          <tr><td></td><td>none</td></tr>
+        </table>
+        <table class="table_striped">
+          <tr><th>Name</th><th>MOBILE</th></tr>
+          <tr><td></td><td>none</td></tr>
+        </table>
+        <table class="table_hover">
+          <tr><th>Name</th><th>MOBILE</th></tr>
+          <tr><td></td><td>none</td></tr>
+        </table>
+      </div>
+      <div class="small-12" id="button">
+        <h2>Button</h2>
+        <button class="button button_size_small">Click Me</button>
+        <button class="button">Click Me</button>
+        <button class="button button_size_large">Click Me</button>
+        <button class="button button_size_full">Click Me</button>
+        <button class="button button_color_primary">Click Me</button>
+        <button class="button button_color_secondary">Click Me</button>
+        <button class="button button_style_hollow">Click Me</button>
+      </div>
+      <div class="small-12" id="grid">
+        <h2>Grid</h2>
+        <div class="wrap">
+          {% for i in range(0,12) %}
+          <div class="small-12 medium-6 large-3" style="border:1px solid #ccc;height:40px;margin-bottom:1rem;"></div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="small-12" id="helper">
+        <h2>Helper</h2>
+        <p>.hidden</p>
+        <p class="text-left">.text-left</p>
+        <p class="text-center">.text-center</p>
+        <p class="text-right">.text-right</p>
+        <span class="float-left">.float-left</span>
+        <span class="float-right">.float-right</span>
       </div>
     </div>
   </div>

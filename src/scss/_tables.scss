@@ -1,0 +1,33 @@
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: $global-margin;
+
+  th,
+  td {
+    padding: $table-cell-padding;
+    vertical-align: top;
+    border-top: $table-border-width solid $table-border-color;
+  }
+}
+
+
+.table_bordered {
+  &,
+  th,
+  td {
+    border: $table-border-width solid $table-border-color;
+  }
+}
+
+.table_striped {
+  tr:nth-of-type(odd) {
+    background-color: $table-bg-accent;
+  }
+}
+
+.table_hover {
+  tr:hover {
+    background-color: $table-bg-hover;
+  }
+}

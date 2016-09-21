@@ -4,11 +4,22 @@
  * @date 20160921
  */
 
-@import 'color';
-@import 'util/util';
-
+/** import  all valiable **/
+//@import 'mixins';
 @import 'settings';
 
+@import 'normalize';
+
+// Core variables and mixins
 @import 'basic';
-@import 'helper';
+@import 'type';
+@import 'tables';
+@import 'forms';
 @import 'grid';
+@import 'buttons';
+@import 'helper';
+// Reset and dependencies
+// Core CSS
+// Components
+// Components Javascript
+// Utility classes

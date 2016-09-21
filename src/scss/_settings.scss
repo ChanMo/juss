@@ -3,33 +3,110 @@
  */
 
 /** color **/
-@import 'color';
+$color: (
+  'red': #f44336,
+  'pink': #e91e63,
+  'purple': #9c27b0,
+  'deep-purple': #673ab7,
+  'indigo': #3f51b5,
+  'blue': #2196F3,
+  'light-blue': #87CEEB,
+  'cyan': #00bcd4,
+  'aqua': #00ffff,
+  'teal': #009688,
+  'green': #4CAF50,
+  'light-green': #8bc34a,
+  'lime': #cddc39,
+  'sand': #fdf5e6,
+  'khaki': #f0e68c,
+  'yellow': #ffeb3b,
+  'amber': #ffc107,
+  'orange': #ff9800,
+  'deep-orange': #ff5722,
+  'blue-grey': #607d8b,
+  'brown': #795548,
+  'white': #fff,
+  'light-grey': #f1f1f1,
+  'grey': #9e9e9e,
+  'dark-grey': #616161,
+  'black': #000,
+  'pale-red': #ffdddd,
+  'pale-yellow': #ffffcc,
+  'pale-green': #ddffdd,
+  'pale-blue': #ddffff,
+);
 
-$global-font-size: 100% !default;
-$global-width: rem-calc(1200) !default;
+// Global
+$global-margin: 1rem;
+$global-padding: 1rem;
+$global-border-width: 1px;
+$global-border-color: map_get($color, 'grey');
 
-$global-line-height: 1.5 !default;
-$global-font-weight: normal !default;
-$body-background: $white !default;
-$body-font-color: $black !default;
-$global-margin: 1rem !default;
-$global-padding: 1rem !default;
-$global-weight-normal: normal !default;
-$global-weight-bold: bold !default;
-$global-radius: 0 !default;
-$global-text-direction: ltr !default;
-$global-flexbox: false !default;
+// Body
+$body-color: map_get($color, 'black');
+$body-background: map_get($color, 'white');
 
 
-/** default palette **/
-$juss-palette: (
-    primary: $cyan,
-    secondary: $dark-grey,
-    success: $aqua,
-    warning: $deep-orange,
+// Base palette
+$primary-color: map-get($color, 'cyan');
+$secondary-color: map-get($color, 'dark-grey');
+$success-color: map-get($color, 'aqua');
+$warning-color: map-get($color, 'deep-orange');
+
+// A link
+$link-color: $primary-color !default;
+$link-decoration: none !default;
+$link-hover-color: darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;
+
+// Grid
+$grid-breakpoints: (
+    small: 0,
+    medium: 640px,
+    large: 1024px,
+    xlarge: 1200px,
+    xxlarge: 1440px,
 ) !default;
 
-$primary-color: map-get($juss-palette, primary);
-$secondary-color: map-get($juss-palette, secondary);
-$success-color: map-get($juss-palette, success);
-$warning-color: map-get($juss-palette, warning);
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+
+// Typography
+$font-family-base: "Microsoft YaHei",tahoma,arial,sans-serif;
+
+$font-size-root: 16px !default;
+$font-size-base: 1rem !default;
+$font-size-xsmall: 0.75rem !default;
+$font-size-small: 0.875rem !default;
+$font-size-large: 1.25rem !default;
+
+$font-weight: normal !default;
+
+$line-height-base: 1.5 !default;
+
+$font-size-h1: 2.5rem !default;
+$font-size-h2: 2rem !default;
+$font-size-h3: 1.75rem !default;
+$font-size-h4: 1.5rem !default;
+$font-size-h5: 1.25rem !default;
+$font-size-h6: 1rem !default;
+
+$headings-font-weight: 500 !default;
+$headings-line-height: 1.1 !default;
+$headings-color: inherit !default;
+//$headings-top: 0;
+$headings-margin-bottom: .5rem;
+
+$small-font-size: 80% !default;
+
+
+// Table
+$table-background: map_get($color, 'white');
+$table-cell-padding: .75rem !default;
+$table-bg: transparent !default;
+$table-bg-accent: rgba(0,0,0,.05) !important;
+$table-bg-hover: rgba(0,0,0,0.075) !important;
+$table-bg-active: $table-bg-hover !important;
+
+$table-border-width: $global-border-width !default;
+$table-border-color: $global-border-color !default;

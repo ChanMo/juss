@@ -2,14 +2,6 @@
  * grid
  */
 
-$breakpoints: (
-    small: 0,
-    medium: 640px,
-    large: 1024px,
-    xlarge: 1200px,
-    xxlarge: 1440px,
-) !default;
-
 .wrap {
     position: relative;
     display: flex;
@@ -17,32 +9,33 @@ $breakpoints: (
     margin: 0;
     padding: 0;
     width: 100%;
+    max-width: 100%;
 }
 
-@for $i from 1 through 12 {
+@for $i from 1 through $grid-columns {
     @each $size in small, medium, large {
         .wrap > .#{$size}-#{$i} {
         display: block;
-        width: 100%/12*$i;
+        width: 100%/$grid-columns*$i;
         max-width: 100%;
         box-sizing: border-box;
         }
     }
 
-    @media (max-width:map_get($breakpoints, small)) {
+    @media (max-width:map_get($grid-breakpoints, medium)) {
         /** while small **/
         [class*="small-#{$i}"] {
-            width: 100%/12*$i !important;
+            width: 100%/$grid-columns*$i !important;
         }
     }
-    @media (min-width: map_get($breakpoints, small)) and (max-width: map_get($breakpoints, large)) {
+    @media (min-width: map_get($grid-breakpoints, medium)) and (max-width: map_get($grid-breakpoints, large)) {
         [class*="medium-#{$i}"] {
-            width: 100%/12*$i !important;
+            width: 100%/$grid-columns*$i !important;
         }
     }
-    @media (min-width: map_get($breakpoints, large)) {
+    @media (min-width: map_get($grid-breakpoints, large)) {
         [class*="large-#{$i}"] {
-            width: 100%/12*$i !important;
+            width: 100%/$grid-columns*$i !important;
 
         }
 
