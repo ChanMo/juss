@@ -40,3 +40,9 @@ $global-font-size: 100% !default;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@mixin disable-mouse-outline {
+    [data-whatinput='mouse'] & {
+        outline: 0;
+    }
+}

@@ -1,59 +1,74 @@
+@mixin button-style($fill:solid){
+    @if $fill {
+        background: $primary-color;
+        color: white;
+        &:hover {
+            background: darken($primary-color, 10%);
+        }
+        @each $color, $value in $palette {
+            & + .button_color_#{$color} {
+                background: $value;
+                &:hover {
+                    background: darken($value, 10%);
+                }
+            }
+        }
+    } @else {
+        background: transparent;
+        color: $primary-color;
+        border: 1px solid $primary-color;
+        &:hover {
+            background: $primary-color;
+            color: white;
+        }
+        @each $color, $value in $palette {
+            & + .button_color_#{$color} {
+            background: transparent;
+                color: $value;
+                border-color: $value;
+                &:hover {
+                    background: $value;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
 .button {
+    @include disable-mouse-outline;
     display: inline-block;
     white-space: nowrap;
     vertical-align: middle;
     text-align: center;
     cursor: pointer;
-    border: none;
+    border: $button-border;
+    border-radius: $button-radius;
     user-select: none;
     box-sizing: border-box;
-    font-size: 100%;
-    padding: 0.5em 1em;
-    color: #444;
-    color: rgba(0,0,0,0.80);
-    //border: 1px solid #999;
-    background-color: #E6E6E6;
+    margin: $button-margin;
+    padding: $button-padding;
     text-decoration: none;
-    //border-radius: 2px;
+    @include button-style(true);
 
-
-    margin-bottom: 0.5rem;
-
-    /** primary color **/
-    background: $primary-color;
-    color: white;
-    &:active {
+    &_hollow {
+        @include button-style(false);
     }
+
+    &_round {
+        border-radius: $button-round;
+    }
+
     &_size {
-        &_small {
-            font-size: 0.85rem;
-            padding: 0.3rem 0.8rem;
-        }
-        &_large {
-            font-size: 1.2rem;
-            padding: 0.6rem 1.2rem;
+        @each $ele, $size in $button-size {
+            &_#{$ele} {
+                font-size: $size;
+            }
         }
         &_full {
             display: block;
             width: 100%;
         }
     }
-    &_color {
-        &_primary {
-            background: $primary-color;
-            color: white;
-        }
-        &_secondary {
-            background: $secondary-color;
-            color: black;
-        }
-    }
-    &_style{
-        &_hollow {
-            background: transparent;
-            color: $primary-color;
-            border: 1px solid $primary-color;
-        }
-    }
-}
 
+}

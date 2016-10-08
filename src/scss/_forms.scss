@@ -14,21 +14,22 @@ input[type="tel"],
 input[type="color"],
 select,
 textarea {
-    padding: 0 0.5rem;
+    padding: $form-input-padding;
     display: block;
     width: 100%;
-    height: 2.5rem;
-    line-height: 2.5rem;
+    height: $form-input-height;
+    margin-bottom: $global-margin;
+    line-height: $form-input-height;
     max-width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 0;
+    border: $global-border-width solid $global-border-color;
+    border-radius: $form-input-radius;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-appearance: none; /** safari **/
     box-sizing: border-box;
     &:focus {
         outline: 0;
-        border-color: #129FEA;
+        border-color: $primary-color;
     }
     &[disabled] {
         cursor: not-allowed;
