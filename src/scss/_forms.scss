@@ -1,3 +1,17 @@
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  -webkit-appearance: listbox;
+}
+
+textarea {
+  resize: vertical;
+}
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -14,19 +28,19 @@ input[type="tel"],
 input[type="color"],
 select,
 textarea {
-    padding: $form-input-padding;
     display: block;
     width: 100%;
+    //max-width: 100%;
     height: $form-input-height;
-    margin-bottom: $global-margin;
+    margin: $form-input-margin;
+    padding: $form-input-padding;
     line-height: $form-input-height;
-    max-width: 100%;
-    border: $global-border-width solid $global-border-color;
+    border: $form-input-border;
     border-radius: $form-input-radius;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    -webkit-appearance: none; /** safari **/
     box-sizing: border-box;
+    -webkit-appearance: none; /** safari **/
     &:focus {
         outline: 0;
         border-color: $primary-color;

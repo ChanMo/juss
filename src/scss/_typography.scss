@@ -1,0 +1,80 @@
+html {
+    box-sizing: border-box;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    font-weight: $base-font-weight;
+    line-height: $base-line-height;
+    color: $base-color;
+    background: $base-background;
+}
+
+// Paragraph
+p {
+    margin: $paragraph-margin;
+    line-height: $paragraph-line-height;
+}
+
+// Heading
+@each $heading, $size in $heading-font-size {
+    #{$heading} {
+        margin: $heading-margin;
+        font-weight: $heading-font-weight;
+        line-height: $heading-line-height;
+        font-size: #{$size};
+        color: $heading-color;
+    }
+}
+
+// Small
+small {
+    font-size: $small-font-size;
+    font-weight: $small-font-weight;
+    color: $small-color;
+}
+
+// Link
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+ol,
+ul {
+    margin: $list-margin;
+    list-style-type: $list-style-type;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/** helper **/
+
+/** .text-* and .bg-* **/
+@each $name, $value in $palette {
+  .text-#{$name} {
+    color: $value;
+  }
+  .bg-#{$name} {
+    background: $value;
+  }
+
+}
+
+// text align
+@each $align in left, center, right {
+    .text-#{$align} {
+        text-align: #{$align};
+    }
+}

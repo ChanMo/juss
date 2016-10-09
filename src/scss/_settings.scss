@@ -54,16 +54,6 @@ $global-padding: 1rem;
 $global-border-width: 1px;
 $global-border-color: map_get($color, 'grey');
 
-// Body
-$body-color: map_get($color, 'black');
-$body-background: map_get($color, 'white');
-
-// Link
-$link-color: $primary-color !default;
-$link-decoration: none !default;
-$link-hover-color: darken($link-color, 15%) !default;
-$link-hover-decoration: underline !default;
-
 // Grid
 $grid-breakpoints: (
     small: 0,
@@ -74,47 +64,67 @@ $grid-breakpoints: (
 ) !default;
 $grid-columns: 12 !default;
 $grid-gutter-width: 2rem !default;
+$grid-column-padding: .5rem;
 
 // Typography
-$font-family-base: "Microsoft YaHei",tahoma,arial,sans-serif;
-$font-size-root: 16px !default;
-$font-size-base: 1rem !default;
-$font-size-xsmall: 0.75rem !default;
-$font-size-small: 0.875rem !default;
-$font-size-large: 1.25rem !default;
-$font-weight: normal !default;
+$base-font-family: "Microsoft YaHei",tahoma,arial,sans-serif;
+$base-font-size: 1rem !default;
+$base-font-weight: normal !default;
+$base-color: map_get($color, 'black');
+$base-background: map_get($color, 'white');
+$base-line-height: 1.5;
 
-// P
-$line-height-base: 1.5 !default;
+// Paragraph
+$paragraph-margin: 0 0 .5rem 0;
+$paragraph-line-height: 1.5 !default;
 
 // Heading
-$font-size-h1: 2.5rem !default;
-$font-size-h2: 2rem !default;
-$font-size-h3: 1.75rem !default;
-$font-size-h4: 1.5rem !default;
-$font-size-h5: 1.25rem !default;
-$font-size-h6: 1rem !default;
-$headings-font-weight: 500 !default;
-$headings-line-height: 1.1 !default;
-$headings-color: inherit !default;
-//$headings-top: 0;
-$headings-margin-bottom: .5rem;
+$heading-margin: 0 0 $global-margin 0;
+$heading-font-size: (
+    h1: 2.5rem,
+    h2: 2rem,
+    h3: 1.75rem,
+    h4: 1.5rem,
+    h5: 1.25rem,
+    h6: 1rem,
+);
+$heading-font-weight: 500 !default;
+$heading-line-height: 1.1 !default;
+$heading-color: inherit !default;
+
+// Small
 $small-font-size: 80% !default;
+$small-font-weight: normal !default;
+$small-color: darkend($heading-color, 80%);
+
+// Link
+$link-color: $primary-color !default;
+$link-decoration: none !default;
+$link-hover-color: darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;
+
+// List
+$list-margin: 0 0 $global-margin 0;
+$list-style-type: normal;
+
+// Image
 
 // Table
+$table-margin: 0 0 $global-margin 0;
+$table-border: 1px solid $global-border-color;
 $table-background: map_get($color, 'white');
 $table-cell-padding: .75rem !default;
-$table-bg: transparent !default;
-$table-bg-accent: rgba(0,0,0,.05) !important;
-$table-bg-hover: rgba(0,0,0,0.075) !important;
-$table-bg-active: $table-bg-hover !important;
-$table-border-width: $global-border-width !default;
-$table-border-color: $global-border-color !default;
+//$table-bg: transparent !default;
+//$table-bg-accent: rgba(0,0,0,.05) !important;
+//$table-bg-hover: rgba(0,0,0,0.075) !important;
+//$table-bg-active: $table-bg-hover !important;
 
 // Form
+$form-input-margin: 0 0 $global-margin 0;
 $form-input-padding: 0 0.5rem;
 $form-input-height: 2.5rem;
 $form-input-radius: 0;
+$form-input-border: 1px solid $global-border-color;
 
 // Button
 $button-margin: 0 0 $global-margin;

@@ -19,6 +19,7 @@
         width: 100%/$grid-columns*$i;
         max-width: 100%;
         box-sizing: border-box;
+        padding: $grid-column-padding;
         }
     }
 
