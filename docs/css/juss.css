@@ -822,13 +822,17 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
   box-sizing: border-box; }
 
 @media (max-width: 640px) {
-  /** while small **/
   [class*="small-1"] {
     width: 8.33333% !important; } }
 
 @media (min-width: 640px) and (max-width: 1024px) {
   [class*="medium-1"] {
     width: 8.33333% !important; } }
+
+@media (min-width: 640px) {
+  [class*="medium-1"]:not([class*="large-"]) {
+    width: 8.33333% !important;
+    border-color: blue !important; } }
 
 @media (min-width: 1024px) {
   [class*="large-1"] {
@@ -853,13 +857,17 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
   box-sizing: border-box; }
 
 @media (max-width: 640px) {
-  /** while small **/
   [class*="small-2"] {
     width: 16.66667% !important; } }
 
 @media (min-width: 640px) and (max-width: 1024px) {
   [class*="medium-2"] {
     width: 16.66667% !important; } }
+
+@media (min-width: 640px) {
+  [class*="medium-2"]:not([class*="large-"]) {
+    width: 16.66667% !important;
+    border-color: blue !important; } }
 
 @media (min-width: 1024px) {
   [class*="large-2"] {
@@ -884,13 +892,17 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
   box-sizing: border-box; }
 
 @media (max-width: 640px) {
-  /** while small **/
   [class*="small-3"] {
     width: 25% !important; } }
 
 @media (min-width: 640px) and (max-width: 1024px) {
   [class*="medium-3"] {
     width: 25% !important; } }
+
+@media (min-width: 640px) {
+  [class*="medium-3"]:not([class*="large-"]) {
+    width: 25% !important;
+    border-color: blue !important; } }
 
 @media (min-width: 1024px) {
   [class*="large-3"] {
@@ -915,13 +927,17 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
   box-sizing: border-box; }
 
 @media (max-width: 640px) {
-  /** while small **/
   [class*="small-4"] {
     width: 33.33333% !important; } }
 
 @media (min-width: 640px) and (max-width: 1024px) {
   [class*="medium-4"] {
     width: 33.33333% !important; } }
+
+@media (min-width: 640px) {
+  [class*="medium-4"]:not([class*="large-"]) {
+    width: 33.33333% !important;
+    border-color: blue !important; } }
 
 @media (min-width: 1024px) {
   [class*="large-4"] {
@@ -946,13 +962,17 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
   box-sizing: border-box; }
 
 @media (max-width: 640px) {
-  /** while small **/
   [class*="small-5"] {
     width: 41.66667% !important; } }
 
 @media (min-width: 640px) and (max-width: 1024px) {
   [class*="medium-5"] {
     width: 41.66667% !important; } }
+
+@media (min-width: 640px) {
+  [class*="medium-5"]:not([class*="large-"]) {
+    width: 41.66667% !important;
+    border-color: blue !important; } }
 
 @media (min-width: 1024px) {
   [class*="large-5"] {
@@ -977,13 +997,17 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
   box-sizing: border-box; }
 
 @media (max-width: 640px) {
-  /** while small **/
   [class*="small-6"] {
     width: 50% !important; } }
 
 @media (min-width: 640px) and (max-width: 1024px) {
   [class*="medium-6"] {
     width: 50% !important; } }
+
+@media (min-width: 640px) {
+  [class*="medium-6"]:not([class*="large-"]) {
+    width: 50% !important;
+    border-color: blue !important; } }
 
 @media (min-width: 1024px) {
   [class*="large-6"] {
@@ -1008,13 +1032,17 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
   box-sizing: border-box; }
 
 @media (max-width: 640px) {
-  /** while small **/
   [class*="small-7"] {
     width: 58.33333% !important; } }
 
 @media (min-width: 640px) and (max-width: 1024px) {
   [class*="medium-7"] {
     width: 58.33333% !important; } }
+
+@media (min-width: 640px) {
+  [class*="medium-7"]:not([class*="large-"]) {
+    width: 58.33333% !important;
+    border-color: blue !important; } }
 
 @media (min-width: 1024px) {
   [class*="large-7"] {
@@ -1039,13 +1067,17 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
   box-sizing: border-box; }
 
 @media (max-width: 640px) {
-  /** while small **/
   [class*="small-8"] {
     width: 66.66667% !important; } }
 
 @media (min-width: 640px) and (max-width: 1024px) {
   [class*="medium-8"] {
     width: 66.66667% !important; } }
+
+@media (min-width: 640px) {
+  [class*="medium-8"]:not([class*="large-"]) {
+    width: 66.66667% !important;
+    border-color: blue !important; } }
 
 @media (min-width: 1024px) {
   [class*="large-8"] {
@@ -1070,13 +1102,17 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
   box-sizing: border-box; }
 
 @media (max-width: 640px) {
-  /** while small **/
   [class*="small-9"] {
     width: 75% !important; } }
 
 @media (min-width: 640px) and (max-width: 1024px) {
   [class*="medium-9"] {
     width: 75% !important; } }
+
+@media (min-width: 640px) {
+  [class*="medium-9"]:not([class*="large-"]) {
+    width: 75% !important;
+    border-color: blue !important; } }
 
 @media (min-width: 1024px) {
   [class*="large-9"] {
@@ -1101,13 +1137,17 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
   box-sizing: border-box; }
 
 @media (max-width: 640px) {
-  /** while small **/
   [class*="small-10"] {
     width: 83.33333% !important; } }
 
 @media (min-width: 640px) and (max-width: 1024px) {
   [class*="medium-10"] {
     width: 83.33333% !important; } }
+
+@media (min-width: 640px) {
+  [class*="medium-10"]:not([class*="large-"]) {
+    width: 83.33333% !important;
+    border-color: blue !important; } }
 
 @media (min-width: 1024px) {
   [class*="large-10"] {
@@ -1132,13 +1172,17 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
   box-sizing: border-box; }
 
 @media (max-width: 640px) {
-  /** while small **/
   [class*="small-11"] {
     width: 91.66667% !important; } }
 
 @media (min-width: 640px) and (max-width: 1024px) {
   [class*="medium-11"] {
     width: 91.66667% !important; } }
+
+@media (min-width: 640px) {
+  [class*="medium-11"]:not([class*="large-"]) {
+    width: 91.66667% !important;
+    border-color: blue !important; } }
 
 @media (min-width: 1024px) {
   [class*="large-11"] {
@@ -1163,13 +1207,17 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
   box-sizing: border-box; }
 
 @media (max-width: 640px) {
-  /** while small **/
   [class*="small-12"] {
     width: 100% !important; } }
 
 @media (min-width: 640px) and (max-width: 1024px) {
   [class*="medium-12"] {
     width: 100% !important; } }
+
+@media (min-width: 640px) {
+  [class*="medium-12"]:not([class*="large-"]) {
+    width: 100% !important;
+    border-color: blue !important; } }
 
 @media (min-width: 1024px) {
   [class*="large-12"] {
