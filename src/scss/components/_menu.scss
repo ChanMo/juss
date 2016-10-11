@@ -1,0 +1,19 @@
+.menu {
+  padding: 0;
+  li, a {
+    display: inline-block;
+  }
+  a,
+  a:hover {
+    text-decoration: none;
+  }
+  a {
+    padding: .5rem 1rem;
+  }
+}
+
+.menu_vertical {
+  li, a {
+    display: block !important;
+  }
+}

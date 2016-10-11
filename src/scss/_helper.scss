@@ -15,27 +15,66 @@
     float: right;
 }
 
-.hidden {
+.hide {
     display: none !important;
 }
 
 .show-for-small {
-    display: none;
-    @media (max-width:map_get($grid-breakpoints, medium)) {
-        display: initial !important;
-    }
+  /** just show small, medium and large do not care **/
+  @media (max-width:map_get($grid-breakpoints, medium)) {
+      display: block !important;
+  }
+}
+.show-for-small-only {
+  /** show small only, hide others **/
+  @extend .show-for-small;
+  @media (min-width:map_get($grid-breakpoints, medium)) {
+    display: none !important;
+  }
 }
 
 .show-for-medium {
-    display: none;
-    @media (min-width:map_get($grid-breakpoints, medium)) and (max-width:map_get($grid-breakpoints, large)) {
-        display: initial !important;
-    }
+  /** show for medium and large **/
+  @media (min-width:map_get($grid-breakpoints, medium)) and (max-width:map_get($grid-breakpoints, large)) {
+    display: block !important;
+  }
+}
+.show-for-medium-only {
+  @extend .show-for-medium;
+  @media (max-width:map_get($grid-breakpoints, medium)) {
+    display: none !important;
+  }
+  @media (min-width:map_get($grid-breakpoints, large)) {
+    display: none !important;
+  }
+}
+
+.show-for-small-medium {
+  @extend .show-for-medium;
+  @extend .show-for-small;
+  @media (min-width:map_get($grid-breakpoints, large)) {
+    display: none !important;
+  }
+}
+
+.show-for-medium-large {
+  /** only **/
+  @extend .show-for-medium;
+  @extend .show-for-large;
+  @media (max-width:map_get($grid-breakpoints, medium)) {
+    display: none !important;
+  }
 }
 
 .show-for-large {
-    display: none;
-    @media (min-width:map_get($grid-breakpoints, large)) {
-        display: initial !important;
-    }
+  /** show for large only **/
+  @media (min-width:map_get($grid-breakpoints, large)) {
+      display: block !important;
+  }
+}
+.show-for-large-only {
+  @extend .show-for-large;
+  @media (max-width:map_get($grid-breakpoints, large)) {
+      display: none !important;
+  }
 }

@@ -1,0 +1,21 @@
+.top-bar {
+  $height: 4rem;
+  width: 100%;
+  height: $height;
+  line-height: $height;
+  background: map_get($palette, secondary);
+  color: map_get($palette, dark);
+  font-size: 0.85rem;
+  .menu {
+    line-height: $height;
+    a {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+.top-bar_fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}

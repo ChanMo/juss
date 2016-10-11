@@ -378,9 +378,6 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-/**
- *
- */
 html {
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;
@@ -1171,23 +1168,81 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
 .float-right {
   float: right; }
 
-.hidden {
+.hide {
   display: none !important; }
 
-.show-for-small {
-  display: none; }
+.show-for-small, .show-for-small-only, .show-for-small-medium {
+  /** just show small, medium and large do not care **/ }
   @media (max-width: 640px) {
-    .show-for-small {
-      display: initial !important; } }
+    .show-for-small, .show-for-small-only, .show-for-small-medium {
+      display: block !important; } }
 
-.show-for-medium {
-  display: none; }
+.show-for-small-only {
+  /** show small only, hide others **/ }
+  @media (min-width: 640px) {
+    .show-for-small-only {
+      display: none !important; } }
+
+.show-for-medium, .show-for-medium-only, .show-for-small-medium, .show-for-medium-large {
+  /** show for medium and large **/ }
   @media (min-width: 640px) and (max-width: 1024px) {
-    .show-for-medium {
-      display: initial !important; } }
+    .show-for-medium, .show-for-medium-only, .show-for-small-medium, .show-for-medium-large {
+      display: block !important; } }
 
-.show-for-large {
-  display: none; }
+@media (max-width: 640px) {
+  .show-for-medium-only {
+    display: none !important; } }
+
+@media (min-width: 1024px) {
+  .show-for-medium-only {
+    display: none !important; } }
+
+@media (min-width: 1024px) {
+  .show-for-small-medium {
+    display: none !important; } }
+
+.show-for-medium-large {
+  /** only **/ }
+  @media (max-width: 640px) {
+    .show-for-medium-large {
+      display: none !important; } }
+
+.show-for-large, .show-for-medium-large, .show-for-large-only {
+  /** show for large only **/ }
   @media (min-width: 1024px) {
-    .show-for-large {
-      display: initial !important; } }
+    .show-for-large, .show-for-medium-large, .show-for-large-only {
+      display: block !important; } }
+
+@media (max-width: 1024px) {
+  .show-for-large-only {
+    display: none !important; } }
+
+.menu {
+  padding: 0; }
+  .menu li, .menu a {
+    display: inline-block; }
+  .menu a,
+  .menu a:hover {
+    text-decoration: none; }
+  .menu a {
+    padding: .5rem 1rem; }
+
+.menu_vertical li, .menu_vertical a {
+  display: block !important; }
+
+.top-bar {
+  width: 100%;
+  height: 4rem;
+  line-height: 4rem;
+  background: #616161;
+  font-size: 0.85rem; }
+  .top-bar .menu {
+    line-height: 4rem; }
+    .top-bar .menu a {
+      padding-top: 0;
+      padding-bottom: 0; }
+
+.top-bar_fixed {
+  position: fixed;
+  top: 0;
+  left: 0; }

@@ -1,28 +1,3 @@
-/* .top-ad { */
-/*     width: 100%; */
-/*     height: 100px; */
-/*     max-height: 100px; */
-/*     overflow: hidden; */
-/*     &::after { */
-/*         content: "\f00d"; */
-/*         font-family: FontAwesome; */
-/*         position: absolute; */
-/*         right: 30px; */
-/*         top: 30px; */
-/*         border: 2px solid white; */
-/*         border-radius: 50%; */
-/*         width: 40px; */
-/*         height: 40px; */
-/*         line-height: 40px; */
-/*         text-align: center; */
-/*         font-size: 16px; */
-/*         cursor: pointer; */
-/*         color: white; */
-/*         transition: all 2s; */
-/*     } */
-/* } */
-
-
 .search-form {
     height: 40px;
     margin-bottom: 5px;
@@ -60,18 +35,6 @@
         letter-spacing: 4px;
     }
 }
-
-
-/********************** list menu **********************/
-ul.menu {
-    li {
-        display: inline;
-        a {
-            display: inline;
-        }
-    }
-}
-
 
 
 .badge {

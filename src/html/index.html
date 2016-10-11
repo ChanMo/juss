@@ -2,7 +2,7 @@
 {% block main %}
 <div class="wrap main">
   <div class="small-12 medium-3 main-menu">
-    <ul class="menu">
+    <ul class="menu menu_vertical">
       <!-- <li><a href="#color">Color</a></li> -->
       <li><a href="#grid">Grid</a></li>
       <li><a href="#typography">Typography</a></li>
@@ -10,8 +10,8 @@
       <li><a href="#table">Table</a></li>
       <li><a href="#form">Form</a></li>
       <li><a href="#button">Button</a></li>
-
-
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#top-bar">TopBar</a></li>
     </ul>
   </div>
   <div class="small-12 medium-9 main-container">
@@ -78,8 +78,13 @@
 
         <br>
         <p class="show-for-small">show for small</p>
+        <p class="show-for-small-only">show for small only</p>
         <p class="show-for-medium">show for medium</p>
+        <p class="show-for-medium-only">show for medium only</p>
+        <p class="show-for-small-medium">only show for small and medium</p>
+        <p class="show-for-medium-large">only show for medium and large</p>
         <p class="show-for-large">show for large</p>
+        <p class="show-for-large-only">show for large only</p>
       </div>
 
       <div class="small-12" id="table">
@@ -135,7 +140,24 @@
         <button class="button button_round button_hollow">hollow round</button>
       </div>
 
-
+      <div class="small-12" id="menu">
+        <h1>Menu</h1>
+        <ul class="menu">
+          <li><a href="javascript:;">menu1</a></li>
+          <li><a href="javascript:;">menu2</a></li>
+          <li><a href="javascript:;">menu3</a></li>
+        </ul>
+      </div>
+      <div class="small-12" id="top-bar">
+        <h1>TopBar</h1>
+        <div class="top-bar">
+          <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>

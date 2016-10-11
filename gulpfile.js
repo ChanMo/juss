@@ -18,7 +18,7 @@ var del = require('del');
 
 /** sass **/
 gulp.task('sass', function(){
-    return gulp.src('src/scss/*.scss')
+    return gulp.src('src/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('src/css'))
         .pipe(gulp.dest('docs/css'))
@@ -62,7 +62,7 @@ gulp.task('useref', function(){
 
 /** nunjucksRender **/
 gulp.task('nunjucksRender', function(){
-    return gulp.src(['src/html/*.html'])
+    return gulp.src(['src/html/**/*.html'])
         .pipe(nunjucksRender({
             path: ['src/html/']
         }))
@@ -82,9 +82,9 @@ gulp.task('browserSync', function(){
 /** default **/
 gulp.task('default', ['sass', 'js', 'nunjucksRender', 'browserSync'], function(){
     console.log('Hello Chen');
-    gulp.watch('src/scss/*.scss', ['sass']);
+    gulp.watch('src/scss/**/*.scss', ['sass']);
     gulp.watch('src/js/*.js', ['js']);
-    gulp.watch('src/**/*.html', ['nunjucksRender']);
+    gulp.watch('src/html/**/*.html', ['nunjucksRender']);
 });
 
 /** build **/
