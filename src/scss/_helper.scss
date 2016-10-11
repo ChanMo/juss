@@ -18,3 +18,24 @@
 .hidden {
     display: none !important;
 }
+
+.show-for-small {
+    display: none;
+    @media (max-width:map_get($grid-breakpoints, medium)) {
+        display: initial !important;
+    }
+}
+
+.show-for-medium {
+    display: none;
+    @media (min-width:map_get($grid-breakpoints, medium)) and (max-width:map_get($grid-breakpoints, large)) {
+        display: initial !important;
+    }
+}
+
+.show-for-large {
+    display: none;
+    @media (min-width:map_get($grid-breakpoints, large)) {
+        display: initial !important;
+    }
+}

@@ -1173,3 +1173,21 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
 
 .hidden {
   display: none !important; }
+
+.show-for-small {
+  display: none; }
+  @media (max-width: 640px) {
+    .show-for-small {
+      display: initial !important; } }
+
+.show-for-medium {
+  display: none; }
+  @media (min-width: 640px) and (max-width: 1024px) {
+    .show-for-medium {
+      display: initial !important; } }
+
+.show-for-large {
+  display: none; }
+  @media (min-width: 1024px) {
+    .show-for-large {
+      display: initial !important; } }
