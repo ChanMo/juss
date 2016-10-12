@@ -1,12 +1,25 @@
-/**
-.circle {
-    display: block;
-    width: 50%;
-    border-radius: 50%;
-    overflow: hidden;
+/** .text-* and .bg-* **/
+@each $name, $value in $palette {
+  .text-#{$name} {
+    color: $value;
+  }
+  .bg-#{$name} {
+    background: $value;
+  }
 }
-**/
 
+@each $name, $value in $color {
+  .bg-#{$name} {
+    background: $value;
+  }
+}
+
+// text align
+@each $align in left, center, right {
+    .text-#{$align} {
+        text-align: #{$align};
+    }
+}
 .float-left {
     float: left;
 }

@@ -1,14 +1,19 @@
 @import 'juss';
 
 .main {
-    width: 1200px;
+    //width: 1200px;
     max-width: 100%;
-    margin: 2rem auto 4rem;
+    //margin: 2rem auto 4rem;
 }
 .main-menu {
     padding: 1rem;
-    background: map_get($color, light-grey);
-    position: relative;
+    background: map_get($color, 'teal');
+    a {
+        color: map_get($color, 'light-grey');
+    }
+    li:hover a {
+        color: map_get($color, 'yellow');
+    }
 }
 .main-container {
     padding: 1rem;

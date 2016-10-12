@@ -8,8 +8,12 @@
     text-decoration: none;
   }
   a {
-    padding: .5rem 1rem;
+      padding: $menu-padding;
   }
+  /* .active a { */
+  /*     background: $menu-active-bg; */
+  /*     color: $menu-active-color; */
+  /* } */
 }
 
 .menu_vertical {

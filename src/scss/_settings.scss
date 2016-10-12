@@ -91,6 +91,9 @@ $heading-font-size: (
 $heading-font-weight: 500 !default;
 $heading-line-height: 1.1 !default;
 $heading-color: inherit !default;
+//$subheading-margin: .5rem 0;
+//$subheading-font-size: 60%;
+//$subheading-color: darkend($heading-color, 80%);
 
 // Small
 $small-font-size: 80% !default;
@@ -139,3 +142,13 @@ $button-size: (
     large: 1.2rem
 );
 $button-round: .5rem;
+
+
+/** Components **/
+$menu-padding: .5rem 1rem;
+//$menu-active-bg: map_get($palette, primary);
+//$menu-active-color: white;
+
+
+// Pagination
+$pagination-margin: 0 0 1rem 0;

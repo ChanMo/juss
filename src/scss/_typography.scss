@@ -59,22 +59,3 @@ img {
   vertical-align: middle;
 }
 
-/** helper **/
-
-/** .text-* and .bg-* **/
-@each $name, $value in $palette {
-  .text-#{$name} {
-    color: $value;
-  }
-  .bg-#{$name} {
-    background: $value;
-  }
-
-}
-
-// text align
-@each $align in left, center, right {
-    .text-#{$align} {
-        text-align: #{$align};
-    }
-}

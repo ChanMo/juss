@@ -1,0 +1,18 @@
+.pagination {
+    @extend .menu;
+    margin: $pagination-margin;
+    a {
+        padding: .2rem .5rem;
+        border: 1px solid map_get($color, light-grey);
+        color: map_get($color, dark-grey);
+    }
+    .active a {
+        background: map_get($palette, primary);
+        color: white;
+        cursor: not-allowed;
+    }
+    li:not(.active):hover a {
+        background: map_get($palette, primary);
+        color: white;
+    }
+}

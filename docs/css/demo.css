@@ -8,6 +8,7 @@
  * juss settings
  */
 /** color **/
+/** Components **/
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -378,6 +379,7 @@ textarea {
   font: inherit;
   /* 2 */ }
 
+/** .circle **/
 html {
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;
@@ -458,41 +460,6 @@ img {
   max-width: 100%;
   height: auto;
   vertical-align: middle; }
-
-/** helper **/
-/** .text-* and .bg-* **/
-.text-primary {
-  color: #00bcd4; }
-
-.bg-primary {
-  background: #00bcd4; }
-
-.text-secondary {
-  color: #616161; }
-
-.bg-secondary {
-  background: #616161; }
-
-.text-success {
-  color: #00ffff; }
-
-.bg-success {
-  background: #00ffff; }
-
-.text-warning {
-  color: #ff5722; }
-
-.bg-warning {
-  background: #ff5722; }
-
-.text-left {
-  text-align: left; }
-
-.text-center {
-  text-align: center; }
-
-.text-right {
-  text-align: right; }
 
 table {
   border-collapse: collapse;
@@ -1154,14 +1121,130 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
     display: block;
     width: 100%; }
 
-/**
-.circle {
-    display: block;
-    width: 50%;
-    border-radius: 50%;
-    overflow: hidden;
-}
-**/
+/** .text-* and .bg-* **/
+.text-primary {
+  color: #00bcd4; }
+
+.bg-primary {
+  background: #00bcd4; }
+
+.text-secondary {
+  color: #616161; }
+
+.bg-secondary {
+  background: #616161; }
+
+.text-success {
+  color: #00ffff; }
+
+.bg-success {
+  background: #00ffff; }
+
+.text-warning {
+  color: #ff5722; }
+
+.bg-warning {
+  background: #ff5722; }
+
+.bg-red {
+  background: #f44336; }
+
+.bg-pink {
+  background: #e91e63; }
+
+.bg-purple {
+  background: #9c27b0; }
+
+.bg-deep-purple {
+  background: #673ab7; }
+
+.bg-indigo {
+  background: #3f51b5; }
+
+.bg-blue {
+  background: #2196F3; }
+
+.bg-light-blue {
+  background: #87CEEB; }
+
+.bg-cyan {
+  background: #00bcd4; }
+
+.bg-aqua {
+  background: #00ffff; }
+
+.bg-teal {
+  background: #009688; }
+
+.bg-green {
+  background: #4CAF50; }
+
+.bg-light-green {
+  background: #8bc34a; }
+
+.bg-lime {
+  background: #cddc39; }
+
+.bg-sand {
+  background: #fdf5e6; }
+
+.bg-khaki {
+  background: #f0e68c; }
+
+.bg-yellow {
+  background: #ffeb3b; }
+
+.bg-amber {
+  background: #ffc107; }
+
+.bg-orange {
+  background: #ff9800; }
+
+.bg-deep-orange {
+  background: #ff5722; }
+
+.bg-blue-grey {
+  background: #607d8b; }
+
+.bg-brown {
+  background: #795548; }
+
+.bg-white {
+  background: #fff; }
+
+.bg-light-grey {
+  background: #f1f1f1; }
+
+.bg-grey {
+  background: #9e9e9e; }
+
+.bg-dark-grey {
+  background: #616161; }
+
+.bg-black {
+  background: #000; }
+
+.bg-pale-red {
+  background: #ffdddd; }
+
+.bg-pale-yellow {
+  background: #ffffcc; }
+
+.bg-pale-green {
+  background: #ddffdd; }
+
+.bg-pale-blue {
+  background: #ddffff; }
+
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
 .float-left {
   float: left; }
 
@@ -1217,15 +1300,19 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
   .show-for-large-only {
     display: none !important; } }
 
-.menu {
-  padding: 0; }
-  .menu li, .menu a {
+.menu, .pagination {
+  padding: 0;
+  /* .active a { */
+  /*     background: $menu-active-bg; */
+  /*     color: $menu-active-color; */
+  /* } */ }
+  .menu li, .pagination li, .menu a, .pagination a {
     display: inline-block; }
-  .menu a,
-  .menu a:hover {
+  .menu a, .pagination a,
+  .menu a:hover, .pagination a:hover {
     text-decoration: none; }
-  .menu a {
-    padding: .5rem 1rem; }
+  .menu a, .pagination a {
+    padding: 0.5rem 1rem; }
 
 .menu_vertical li, .menu_vertical a {
   display: block !important; }
@@ -1236,9 +1323,9 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
   line-height: 4rem;
   background: #616161;
   font-size: 0.85rem; }
-  .top-bar .menu {
+  .top-bar .menu, .top-bar .pagination {
     line-height: 4rem; }
-    .top-bar .menu a {
+    .top-bar .menu a, .top-bar .pagination a {
       padding-top: 0;
       padding-bottom: 0; }
 
@@ -1247,15 +1334,30 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
   top: 0;
   left: 0; }
 
+.pagination {
+  margin: 0 0 1rem 0; }
+  .pagination a {
+    padding: .2rem .5rem;
+    border: 1px solid #f1f1f1;
+    color: #616161; }
+  .pagination .active a {
+    background: #00bcd4;
+    color: white;
+    cursor: not-allowed; }
+  .pagination li:not(.active):hover a {
+    background: #00bcd4;
+    color: white; }
+
 .main {
-  width: 1200px;
-  max-width: 100%;
-  margin: 2rem auto 4rem; }
+  max-width: 100%; }
 
 .main-menu {
   padding: 1rem;
-  background: #f1f1f1;
-  position: relative; }
+  background: #009688; }
+  .main-menu a {
+    color: #f1f1f1; }
+  .main-menu li:hover a {
+    color: #ffeb3b; }
 
 .main-container {
   padding: 1rem; }

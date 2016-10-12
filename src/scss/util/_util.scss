@@ -1,8 +1,10 @@
-$global-font-size: 100% !default;
-
-@function rem-calc($values, $base:null) {
-    $count: length($values);
-    @return $values;
+/** .circle **/
+@mixin circle($size, $border) {
+    display: inline-block;
+    width: $size;
+    height: $size;
+    border-radius: $size;
+    border: $border;
 }
 
 
@@ -12,7 +14,6 @@ $global-font-size: 100% !default;
         content: ' ';
         display: table;
     }
-
     &::after {
         clear:both;
     }
