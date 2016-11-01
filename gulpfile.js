@@ -79,6 +79,12 @@ gulp.task('browserSync', function(){
     });
 });
 
+/** copy CNAME to docs **/
+gulp.task('cname', function(){
+    return gulp.src('CNAME')
+        .pipe(gulp.dest('docs'));
+});
+
 /** default **/
 gulp.task('default', ['sass', 'js', 'nunjucksRender', 'browserSync'], function(){
     console.log('Hello Chen');
@@ -88,6 +94,6 @@ gulp.task('default', ['sass', 'js', 'nunjucksRender', 'browserSync'], function()
 });
 
 /** build **/
-gulp.task('build', ['clean', 'sass', 'nunjucksRender', 'fonts', 'images', 'useref'], function(){
+gulp.task('build', ['clean', 'sass', 'js', 'nunjucksRender', 'fonts', 'images', 'useref', 'cname'], function(){
     console.log('Building files...');
 })

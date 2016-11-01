@@ -1,0 +1,50 @@
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(black,0.6);
+    z-index: 99;
+    display: none;
+    overflow: hidden;
+}
+
+.modal {
+    background: white;
+    position: fixed;
+    bottom: 50%;
+    left: 50%;
+    width: 80%;
+    z-index: 99;
+    color: black;
+    opacity: 0;
+    //transform: translate(-50%, 1000%);
+    transform: translate3d(-50%, 100%, 0);
+    display: none;
+    //box-shadow: 2px 2px 5px grey;
+    transition: all .5s;
+    &__main {
+        padding: 2rem 1rem;
+        box-sizing: border-box;
+    }
+    &__action {
+        $size: 3rem;
+        background: black;
+        color: white;
+        box-sizing: border-box;
+        height: $size;
+        line-height: $size;
+        text-align: center;
+        display: flex;
+        .item {
+            width: 100%;
+            color: white;
+        }
+    }
+}
+.modal-active {
+    opacity: 1;
+    transform: translate3d(-50%,50%,0);
+}

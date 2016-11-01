@@ -14,6 +14,8 @@
       <li><a href="#menu">Menu</a></li>
       <li><a href="#top-bar">TopBar</a></li>
       <li><a href="#pagination">Pagination</a></li>
+      <li><a href="#modal">Modal</a></li>
+      <li><a href="#slide">Slide</a></li>
     </ul>
   </div>
   <div class="small-12 medium-9 main-container">
@@ -192,6 +194,51 @@
           <li class="pagination__last"><a href="">last</a></li>
         </ul>
       </div>
+      <div class="small-12" id="modal">
+        <h1>Modal</h1>
+        <a href="javascript;" data-modal-toggle>open modal</a>
+
+        <!-- modal -->
+        <div class="modal-bg" data-modal-toggle></div>
+        <div class="modal">
+          <div class="modal__main">
+            This is a modal.
+          </div>
+          <div class="modal__action">
+            <a href="#" class="item" data-modal-toggle>Cancel</a>
+            <a href="#" class="item" data-modal-toggle>Yes</a>
+          </div>
+        </div>
+        <!-- modal end -->
+
+      </div>
+      <div class="small-12" id="slide">
+        <h1>Slide</h1>
+        <!--slide -->
+        <div style="width:600px;max-width:100%;">
+          <div class="slide" style="height:40vh;">
+            <ul class="slide__main">
+              <li><a href="#" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/72/d7/89/72d789a4204b4e7be415545ec132b2a6.jpg);"></a></li>
+              <li><a href="#" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/3f/26/7a/3f267ad8592fa81ae696100a4f801fc8.jpg);"></a></li>
+              <li><a href="#" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/f4/35/bc/f435bc4e577b5fc27f888fee72fb035d.jpg);"></a></li>
+              <li><a href="#" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/a0/69/60/a06960f77255cc9dbce3ca0c55f03479.jpg);"></a></li>
+            </ul>
+            <a href="#" class="slide__action slide__action_left">
+              <i class="fa fa-angle-left"></i>
+            </a>
+            <a href="#" class="slide__action slide__action_right">
+              <i class="fa fa-angle-right"></i>
+            </a>
+            <ul class="slide__nav">
+              {% for i in range(0,4) %}
+              <li {% if i == 0 %}class="active"{% endif %}><a href="#"></a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <!-- end slide -->
+      </div>
+
     </div>
   </div>
 </div>

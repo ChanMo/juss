@@ -1,0 +1,76 @@
+.slide {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    &__main {
+        position: absolute;
+        top: 0;
+        left: 0;
+        //width: 4*100%;
+        height: 100%;
+        //margin: 0 0 0 -100vw;
+        margin: 0;
+        padding: 0;
+        li, a {
+            //width: 100vw;
+            height: 100%;
+            display: block;
+        }
+        li {
+            float: left;
+        }
+        a {
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+    &__action {
+        &,
+        &:hover {
+            $size: 2rem;
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: $size;
+            height: $size*1.2;
+            background: black;
+            color: white;
+            text-align: center;
+            line-height: $size*1.2;
+        }
+        &_left {
+            left: 0;
+        }
+        &_right {
+            right: 0;
+        }
+    }
+    &__nav {
+        position: absolute;
+        bottom: .5rem;
+        right: 1rem;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        li, a {
+            display: inline-block;
+        }
+        li {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            margin: 0 2px;
+            height: 5px;
+            width: 5px;
+            background: lightgray;
+        }
+        .active a {
+            background: black;
+        }
+    }
+}
+

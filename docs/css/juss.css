@@ -1347,3 +1347,102 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
   .pagination li:not(.active):hover a {
     background: #00bcd4;
     color: white; }
+
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+  display: none;
+  overflow: hidden; }
+
+.modal {
+  background: white;
+  position: fixed;
+  bottom: 50%;
+  left: 50%;
+  width: 80%;
+  z-index: 99;
+  color: black;
+  opacity: 0;
+  transform: translate3d(-50%, 100%, 0);
+  display: none;
+  transition: all .5s; }
+  .modal__main {
+    padding: 2rem 1rem;
+    box-sizing: border-box; }
+  .modal__action {
+    background: black;
+    color: white;
+    box-sizing: border-box;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    display: flex; }
+    .modal__action .item {
+      width: 100%;
+      color: white; }
+
+.modal-active {
+  opacity: 1;
+  transform: translate3d(-50%, 50%, 0); }
+
+.slide {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative; }
+  .slide__main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0; }
+    .slide__main li, .slide__main a {
+      height: 100%;
+      display: block; }
+    .slide__main li {
+      float: left; }
+    .slide__main a {
+      width: 100%;
+      background-position: center;
+      background-size: cover; }
+  .slide__action, .slide__action:hover {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2.4rem;
+    background: black;
+    color: white;
+    text-align: center;
+    line-height: 2.4rem; }
+  .slide__action_left {
+    left: 0; }
+  .slide__action_right {
+    right: 0; }
+  .slide__nav {
+    position: absolute;
+    bottom: .5rem;
+    right: 1rem;
+    display: flex;
+    margin: 0;
+    padding: 0; }
+    .slide__nav li, .slide__nav a {
+      display: inline-block; }
+    .slide__nav li {
+      margin: 0;
+      padding: 0; }
+    .slide__nav a {
+      margin: 0 2px;
+      height: 5px;
+      width: 5px;
+      background: lightgray; }
+    .slide__nav .active a {
+      background: black; }

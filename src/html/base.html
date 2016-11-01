@@ -5,12 +5,18 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Juss, a new simple css framework</title>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- build:css css/juss.min.css -->
-    <!--link rel="stylesheet" href="css/juss.css" /-->
+    <link rel="stylesheet" href="css/juss.css" />
     <!-- endbuild -->
     <link rel="stylesheet" href="css/demo.css" />
   </head>
   <body>
     {% block main %}{% endblock %}
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <!-- build:js js/app.min.js -->
+    <script src="js/_modal.js"></script>
+    <script src="js/_slide.js"></script>
+    <!-- endbuild -->
   </body>
 </html>
