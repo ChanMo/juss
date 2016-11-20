@@ -3,8 +3,13 @@
   width: 100%;
   height: $height;
   line-height: $height;
-  background: map_get($palette, secondary);
-  color: map_get($palette, dark);
+  padding: 0 1rem;
+  box-sizing: border-box;
+  background: $primary-color;
+  color: white;
+  a {
+      color: white;
+  }
   font-size: 0.85rem;
   .menu {
     line-height: $height;

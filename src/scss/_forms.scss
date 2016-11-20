@@ -34,7 +34,8 @@ textarea {
     height: $form-input-height;
     margin: $form-input-margin;
     padding: $form-input-padding;
-    line-height: $form-input-height;
+    //line-height: $form-input-height;
+    line-height: auto;
     border: $form-input-border;
     border-radius: $form-input-radius;
     -webkit-box-sizing: border-box;
@@ -50,6 +51,12 @@ textarea {
         background-color: #eaeded;
         color: #cad2d3;
     }
+}
+
+textarea {
+    height: auto;
+    min-height: $form-input-height;
+    padding: .5rem;
 }
 
 input, select, textarea {

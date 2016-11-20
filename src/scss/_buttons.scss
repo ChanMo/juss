@@ -4,12 +4,14 @@
         color: white;
         &:hover {
             background: darken($primary-color, 10%);
+            color: white;
         }
         @each $color, $value in $palette {
             & + .button_color_#{$color} {
                 background: $value;
                 &:hover {
                     background: darken($value, 10%);
+                    color: white;
                 }
             }
         }
@@ -65,10 +67,11 @@
                 font-size: $size;
             }
         }
-        &_full {
-            display: block;
-            width: 100%;
-        }
+
     }
 
+    &_full {
+        display: block;
+        width: 100%;
+    }
 }
