@@ -22,7 +22,8 @@
     opacity: 0;
     //transform: translate(-50%, 1000%);
     transform: translate3d(-50%, 100%, 0);
-    display: none;
+    visibility: hidden; //use visibility instead of display
+    //display: none;
     //box-shadow: 2px 2px 5px grey;
     transition: all .5s;
     &__main {
@@ -45,6 +46,7 @@
     }
 }
 .modal-active {
+  visibility: visible;
     opacity: 1;
     transform: translate3d(-50%,50%,0);
 }
