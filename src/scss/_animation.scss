@@ -1,0 +1,10 @@
+/**
+ * animation class
+ */
+
+@mixin animation {
+}
+
+.animation {
+  @include animation;
+}

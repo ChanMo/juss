@@ -379,7 +379,10 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-/** .circle **/
+/** make a circle **/
+/** clear both **/
+/** vertical center **/
+/** menu **/
 html {
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;
@@ -1418,7 +1421,8 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
     left: 0;
     height: 100%;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    white-space: nowrap; }
     .slide__main li, .slide__main a {
       height: 100%;
       display: block; }
@@ -1462,6 +1466,50 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
       background: lightgray; }
     .slide__nav .active a {
       background: black; }
+
+.float-button {
+  position: fixed;
+  bottom: 16.66667vw;
+  right: 5vw;
+  width: 11.66667vw;
+  height: 11.66667vw;
+  border-radius: 11.66667vw;
+  text-align: center;
+  line-height: 11.66667vw;
+  background: #00bcd4;
+  color: white; }
+
+.button {
+  margin: 0 1.66667vw;
+  height: 6.66667vw;
+  padding: 0 3.33333vw;
+  border-radius: 0.41667vw;
+  font-size: 2.91667vw; }
+
+.fixed-bottom-bar {
+  /** icon 24 * 24 **/
+  /** padding 16 8 **/
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 11.66667vw;
+  display: flex;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  background: white; }
+  .fixed-bottom-bar a {
+    display: block;
+    width: 33.33333%;
+    text-align: center;
+    padding: 1.25vw 2.5vw 2.08333vw;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 2.5vw; }
+    .fixed-bottom-bar a i {
+      width: 100%;
+      font-size: 5vw; }
+    .fixed-bottom-bar a span {
+      width: 100%; }
 
 .main {
   max-width: 100%; }

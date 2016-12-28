@@ -379,7 +379,10 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-/** .circle **/
+/** make a circle **/
+/** clear both **/
+/** vertical center **/
+/** menu **/
 html {
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;
@@ -1418,7 +1421,8 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
     left: 0;
     height: 100%;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    white-space: nowrap; }
     .slide__main li, .slide__main a {
       height: 100%;
       display: block; }

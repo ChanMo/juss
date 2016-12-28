@@ -1,13 +1,18 @@
-/** .circle **/
-@mixin circle($size, $border) {
+/** make a circle **/
+@mixin circle($size, $border-color:transparent, $border-width:2px) {
     display: inline-block;
     width: $size;
     height: $size;
     border-radius: $size;
-    border: $border;
+    border: $border-width solid $border-color;
+    line-height: $size;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
 }
 
 
+/** clear both **/
 @mixin clearfix {
     &::before,
     &::after {
@@ -19,19 +24,19 @@
     }
 }
 
-@mixin vertical-center {
+
+/** vertical center **/
+@mixin center-vertical {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
-
-@mixin horizontal-center {
+@mixin center-horizontal {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
-
-@mixin absolute-center {
+@mixin center {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -42,4 +47,27 @@
     [data-whatinput='mouse'] & {
         outline: 0;
     }
+}
+
+/** menu **/
+@mixin menu {
+  padding-left: 0;
+  list-style-type: none;
+  & > li {
+    display: inline-block;
+    & > a {
+      display: inline-block;
+    }
+  }
+}
+
+@mixin menu-vertical {
+  padding-left: 0;
+  list-style-type: none;
+  & > li {
+    display: block;
+    & > a {
+      display: block;
+    }
+  }
 }

@@ -1,0 +1,22 @@
+/**
+ * material style
+ * @auth chen
+ * @date 21/12/16 10:15:04
+ */
+
+@mixin box {
+  box-shadow: 1px 2px 2px grey;
+}
+
+@mixin light {
+  $text-color: #000000 * 87%;
+  $text-secondary-color: #000000 * 54%;
+  $text-hint-color: #000000 * 38%;
+  $text-divider-color: #0000000 * 12%;
+}
+@mixin dark {
+  $text-color: #FFFFFF * 100%;
+  $text-secondary-color: #FFFFFF * 70%;
+  $text-hint-color: #FFFFFF * 50%;
+  $text-divider-color: #FFFFFF * 12%;
+}
