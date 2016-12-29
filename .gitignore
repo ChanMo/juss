@@ -2,3 +2,4 @@ bower_components
 node_modules
 src/*.html
 src/css/
+*.log
