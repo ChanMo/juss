@@ -1,7 +1,9 @@
 /**
- * material style
- * @auth chen
- * @date 21/12/16 10:15:04
+ * Material settings
+ *
+ * @date 29/12/16 17:29:47
+ * @author chen
+ * @email chen.orange@aliyun.com
  */
 
 @mixin box {
@@ -20,3 +22,154 @@
   $text-hint-color: #FFFFFF * 50%;
   $text-divider-color: #FFFFFF * 12%;
 }
+/** color **/
+$color: (
+  'red': #f44336,
+  'pink': #e91e63,
+  'purple': #9c27b0,
+  'deep-purple': #673ab7,
+  'indigo': #3f51b5,
+  'blue': #2196F3,
+  'light-blue': #87CEEB,
+  'cyan': #00bcd4,
+  'aqua': #00ffff,
+  'teal': #009688,
+  'green': #4CAF50,
+  'light-green': #8bc34a,
+  'lime': #cddc39,
+  'sand': #fdf5e6,
+  'khaki': #f0e68c,
+  'yellow': #ffeb3b,
+  'amber': #ffc107,
+  'orange': #ff9800,
+  'deep-orange': #ff5722,
+  'blue-grey': #607d8b,
+  'brown': #795548,
+  'white': #fff,
+  'xlight-grey': rgba(black, 0.12),
+  'light-grey': rgba(black, 0.38),
+  'grey': rgba(black, 0.54),
+  'dark-grey': rgba(black, 0.87),
+  'black': #000,
+  'pale-red': #ffdddd,
+  'pale-yellow': #ffffcc,
+  'pale-green': #ddffdd,
+  'pale-blue': #ddffff,
+);
+
+// Base palette
+$primary-color: map-get($color, 'cyan');
+$secondary-color: map-get($color, 'dark-grey');
+$success-color: map-get($color, 'aqua');
+$warning-color: map-get($color, 'deep-orange');
+$palette: (
+    primary: map-get($color, 'cyan'),
+    secondary: map-get($color, 'dark-grey'),
+    success: map-get($color, 'aqua'),
+    warning: map-get($color, 'deep-orange'),
+);
+
+// Global
+$global-margin: 1rem;
+$global-padding: 1rem;
+$global-border-width: 1px;
+$global-border-color: map_get($color, 'grey');
+
+// Grid
+$grid-breakpoints: (
+    small: 0,
+    medium: 640px,
+    large: 1024px,
+    xlarge: 1200px,
+    xxlarge: 1440px,
+) !default;
+$grid-columns: 12 !default;
+$grid-gutter-width: 2rem !default;
+$grid-column-padding: .5rem;
+
+// Typography
+$base-font-family: "Microsoft YaHei",tahoma,arial,sans-serif;
+$base-font-size: 1rem !default;
+$base-font-weight: normal !default;
+$base-color: map_get($color, 'black');
+$base-background: map_get($color, 'white');
+$base-line-height: 1.5;
+
+// Paragraph
+$paragraph-margin: 0 0 .5rem 0;
+$paragraph-line-height: 1.5 !default;
+
+// Heading
+$heading-margin: 0 0 $global-margin 0;
+$heading-font-size: (
+    h1: 2.5rem,
+    h2: 2rem,
+    h3: 1.75rem,
+    h4: 1.5rem,
+    h5: 1.25rem,
+    h6: 1rem,
+);
+$heading-font-weight: 500 !default;
+$heading-line-height: 1.1 !default;
+$heading-color: inherit !default;
+//$subheading-margin: .5rem 0;
+//$subheading-font-size: 60%;
+//$subheading-color: darkend($heading-color, 80%);
+
+// Small
+$small-font-size: 80% !default;
+$small-font-weight: normal !default;
+$small-color: darkend($heading-color, 80%);
+
+// Link
+$link-color: $primary-color !default;
+$link-decoration: none !default;
+$link-hover-color: darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;
+
+// List
+$list-margin: 0 0 $global-margin 0;
+$list-style-type: normal;
+
+// Image
+
+// Table
+$table-margin: 0 0 $global-margin 0;
+$table-border: 1px solid $global-border-color;
+$table-background: map_get($color, 'white');
+$table-cell-padding: .75rem !default;
+//$table-bg: transparent !default;
+//$table-bg-accent: rgba(0,0,0,.05) !important;
+//$table-bg-hover: rgba(0,0,0,0.075) !important;
+//$table-bg-active: $table-bg-hover !important;
+
+// Form
+$form-input-margin: 0 0 $global-margin 0;
+$form-input-padding: 0 0.5rem;
+$form-input-height: 2.5rem;
+$form-input-radius: 0;
+$form-input-border: 1px solid $global-border-color;
+
+// Button
+$button-margin: 0 0 $global-margin;
+$button-padding: .5rem 1rem;
+$button-border: none;
+$button-radius: 0;
+$button-color: map_get($color, 'white');
+$button-bg: $primary-color;
+
+$button-size: (
+    small: 0.85rem,
+    large: 1.2rem
+);
+$button-round: .5rem;
+
+
+/** Components **/
+$menu-padding: .5rem 1rem;
+//$menu-active-bg: map_get($palette, primary);
+//$menu-active-color: white;
+
+
+// Pagination
+$pagination-margin: 0 0 1rem 0;

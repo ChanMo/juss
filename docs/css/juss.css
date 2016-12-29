@@ -379,7 +379,10 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-/** make a circle **/
+/**
+  * make a circle
+  * param: size, border-color, border-width
+  */
 /** clear both **/
 /** vertical center **/
 /** menu **/

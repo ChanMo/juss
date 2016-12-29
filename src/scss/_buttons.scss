@@ -1,4 +1,4 @@
-@mixin button-style($fill:solid){
+@mixin button($fill:solid){
     @if $fill {
         background: $primary-color;
         color: white;
@@ -51,10 +51,10 @@
     margin: $button-margin;
     padding: $button-padding;
     text-decoration: none;
-    @include button-style(true);
+    @include button(true);
 
     &_hollow {
-        @include button-style(false);
+        @include button(false);
     }
 
     &_round {

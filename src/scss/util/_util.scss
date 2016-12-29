@@ -1,4 +1,7 @@
-/** make a circle **/
+/**
+  * make a circle
+  * param: size, border-color, border-width
+  */
 @mixin circle($size, $border-color:transparent, $border-width:2px) {
     display: inline-block;
     width: $size;
