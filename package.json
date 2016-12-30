@@ -1,13 +1,29 @@
 {
-  "name": "Juss",
+  "name": "ju-css",
   "version": "0.0.1",
   "description": "A new simple css framework",
   "main": "index.js",
+  "author": "chanmo",
+  "license": "ISC",
+  "devDependencies": {},
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "chen",
-  "license": "ISC",
-  "devDependencies": {
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChanMo/juss.git"
+  },
+  "keywords": [
+    "css",
+    "js",
+    "jquery"
+  ],
+  "bugs": {
+    "url": "https://github.com/ChanMo/juss/issues"
+  },
+  "homepage": "https://github.com/ChanMo/juss#readme"
 }
