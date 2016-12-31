@@ -1,31 +1,31 @@
 /** .text-* and .bg-* **/
 @each $name, $value in $palette {
   .text-#{$name} {
-    color: $value;
+    color: $value !important;
   }
   .bg-#{$name} {
-    background: $value;
+    background: $value !important;
   }
 }
 
 @each $name, $value in $color {
   .bg-#{$name} {
-    background: $value;
+    background: $value !important;
   }
 }
 
 // text align
 @each $align in left, center, right {
     .text-#{$align} {
-        text-align: #{$align};
+        text-align: #{$align} !important;
     }
 }
 .float-left {
-    float: left;
+    float: left !important;
 }
 
 .float-right {
-    float: right;
+    float: right !important;
 }
 
 .hide {
