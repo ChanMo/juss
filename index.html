@@ -1,0 +1,126 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juss, a new simple css framework</title>
+    <link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css" />
+    <link rel="stylesheet" href="juss.css" />
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Juss, a new css framework.</h1>
+      <p>A very simple css framework, just html, css, no javascript, sass, less, npm.</p>
+      <p><a href="https://github.com/ChanMo/juss">visit Github.com</a></p>
+
+      <section id="flex">
+        <h2 class="subtitle">Flexbox</h2>
+        <div class="flex">
+          <div style="width:200px;height:200px;background:lightgreen;"></div>
+          <div style="width:200px;height:200px;background:lightpink;"></div>
+          <div style="width:200px;height:200px;background:orange;"></div>
+        </div>
+        <pre>&lt;div class="flex"&gt;&lt;div&gt;</pre>
+        <div class="flex flex_center">
+          <div style="width:200px;height:200px;background:lightgreen;"></div>
+          <div style="width:180px;height:180px;background:lightpink;"></div>
+          <div style="width:160px;height:160px;background:orange;"></div>
+        </div>
+        <pre>&lt;div class="flex flex_center"&gt;&lt;div&gt;</pre>
+        <div class="flex flex_between">
+          <div style="width:200px;height:200px;background:lightgreen;"></div>
+          <div style="width:200px;height:200px;background:lightpink;"></div>
+          <div style="width:200px;height:200px;background:orange;"></div>
+        </div>
+        <pre>&lt;div class="flex flex_between"&gt;&lt;div&gt;</pre>
+      </section>
+
+      <section id="paragraphs">
+        <h2 class="subtitle">Paragraphs</h2>
+        <h1>H1 2rem</h1>
+        <h2>H2 1.5rem</h2>
+        <h3>H3 1.25rem</h3>
+        <h4>H4 1rem</h4>
+        <h5>H5 0.85rem</h5>
+        <h6>H6 0.7rem</h6>
+        <p>p 0.85rem</p>
+        <p><span>span</span></p>
+        <p><a href="/">link</a></p>
+      </section>
+
+      <section id="img">
+        <h2 class="subtitle">Image</h2>
+        <a href="https://unsplash.com/photos/kZxjOYwEnAc"><img src="https://images.unsplash.com/photo-1553656497-255ced51fc24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=640&q=80" alt="unsplash.com" /></a>
+        <p>Photo by Chan Mo on Unsplash</p>
+        <a href="https://unsplash.com/photos/kZxjOYwEnAc"><img class="img_grayscale" src="https://images.unsplash.com/photo-1553656497-255ced51fc24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=640&q=80" alt="unsplash.com" /></a>
+        <pre>&lt;img class="img_grayscale" /&gt;</pre>
+      </section>
+
+      <section id="button">
+        <h2 class="subtitle">Button</h2>
+        <button class="btn">Button</button>
+        <button class="btn btn_outline">Button outline</button>
+        <button class="btn btn_small">Small Button</button>
+        <pre>
+&lt;button class="btn"&gt;&lt;button&gt;
+&lt;button class="btn btn_outline"&gt;&lt;button&gt;
+&lt;button class="btn btn_small"&gt;&lt;button&gt;</pre>
+      </section>
+      <section id="table">
+        <h2 class="subtitle">Table</h2>
+        <table border="1">
+          <tr>
+            <th>th</th>
+            <th>th</th>
+          </tr>
+          <tr>
+            <td>td</td>
+            <td>td</td>
+          </tr>
+          <tr>
+            <td>td</td>
+            <td>td</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="form">
+        <h2 class="subtitle">Form</h2>
+        <form>
+          <label>text
+            <input type="text" />
+          </label>
+          <label>select
+            <select>
+              <option value="1">option1</option>
+              <option value="2">option2</option>
+              <option value="3">option3</option>
+            </select>
+          </label>
+          <label>textare
+            <textarea rows="4"></textarea>
+          </label>
+          <label>radio
+            <input type="radio" value="radio" id="radio1"><label for="radio1">radio1</label>
+            <input type="radio" value="radio" id="radio2"><label for="radio2">radio2</label>
+          </label>
+          <br>
+          <label>checkbox
+            <input type="checkbox" value="checkbox" id="checkbox1"><label for="checkbox1">checkbox1</label>
+            <input type="checkbox" value="checkbox" id="checkbox2"><label for="checkbox2">checkbox2</label>
+          </label>
+          <br>
+          <input type="submit" class="btn" value="submit" />
+        </form>
+      </section>
+
+    </div>
+    <footer>
+      <div class="linetitle">
+        <a href="https://www.findchen.com"><span>by ChanMo</span></a>
+      </div>
+    </footer>
+  </body>
+</html>
