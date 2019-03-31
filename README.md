@@ -1,4 +1,15 @@
 # Juss
 A new simple css framework.
 
-Base on Normalize-css and BPM.
+## Feature
+Basic html tags, simple classes.
+
+No javascript, no sass, no npm.
+
+Just html and css.
+
+## Usage
+
+```html
+<link rel="stylesheet" href="juss.css" />
+```
